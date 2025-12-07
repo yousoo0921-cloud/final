@@ -43,12 +43,12 @@ function App() {
     setCart([]); 
   }, []);
 
-  return (
-    <BrowserRouter>
+   return (
+    /* 👇 [수정할 부분] 여기에 basename="/final"을 꼭 추가해야 합니다! */
+    <BrowserRouter basename="/final">
+    
       <div className="container">
         
-        {/* 👇 [변경점] 직접 짜여있던 코드를 지우고, Navbar 컴포넌트를 끼워 넣었습니다! */}
-        {/* 이제 주문서 페이지에 가면 이 Navbar가 알아서 사라집니다. */}
         <Navbar cartCount={cart.length} />
 
         <Routes>
